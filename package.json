@@ -1,8 +1,8 @@
 {
-  "name": "my-blog",
+  "name": "tasklist-blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mikejoester.github.io/my-blog",
+  "homepage": "https://mikejoester.github.io/tasklist-blog",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
