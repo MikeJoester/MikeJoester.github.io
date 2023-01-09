@@ -22,11 +22,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={user ? <Home/> : <Login/>}/>
-        <Route exact path="/register" element={user ? <Home/> : <Register/>}/>
-        <Route exact path="/home" element={user ? <Home/> : <Login/>}/>
-        <Route exact path="/post/:cateID/:postID" element={user ? <Post/> : <Login/>}/>
-        <Route exact path="/user" element={user ? <UserInfo/> : <Login/>}/>
-        <Route exact path="/recover" element={<RecoverPass/>}/>
+        <Route path="/register" element={user ? <Home/> : <Register/>}/>
+        <Route path="/home" element={user ? <Home/> : <Login/>}/>
+        <Route path="/post/:cateID/:postID" element={user ? <Post/> : <Login/>}/>
+        <Route path="/user" element={user ? <UserInfo/> : <Login/>}/>
+        <Route path="/recover" element={<RecoverPass/>}/>
       </Routes>
     </div>
   );
