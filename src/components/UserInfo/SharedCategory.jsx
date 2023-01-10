@@ -5,7 +5,7 @@ import {
   } from "..";
 import { Context } from "../../context/Context";
 
-const SharedCategory = (props) => {
+const SharedCategory = () => {
     const [category, setCate] = useState([]);
     const { user } = useContext(Context);
     const headerData = {
@@ -19,7 +19,7 @@ const SharedCategory = (props) => {
 
     useEffect(() => {
         const fetchCategory = async() => {
-        const res = await axios.get("http://dev.thanqminh.com:3000/task_lists", headerData);
+        const res = await axios.get("http://dev.thanqminh.com:3000/shared", headerData);
         setCate(res.data);
         }
         fetchCategory();
@@ -27,49 +27,20 @@ const SharedCategory = (props) => {
     }, []);
 
     return (
-        <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-            <table class="w-full text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-lg text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="py-3 px-6">
-                            Category Name
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Total Posts
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Total Likes
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Shares
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Action
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="text-base">
-                    {category.map((i, index) => 
-                        <tr className={index % 2 === 0 ? "dark:bg-gray-800 bg-white border-b dark:border-gray-700 hover:bg-slate-600" : "dark:bg-gray-900 bg-white border-b dark:border-gray-700 hover:bg-slate-600"}>
-                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {i.name}
-                        </th>
-                        <td className="py-4 px-6">
-                            {i.todo_count}
-                        </td>
-                        <td className="py-4 px-6">
-                            {i.done_count}
-                        </td>
-                        <td className="py-4 px-6">
-                            {i.share_count}
-                        </td>
-                        <td className="py-4 px-6">
-                            <EditCategory info={i}/>
-                        </td>
-                    </tr>    
-                    )}
-                </tbody>
-            </table>
+        <div className="flex flex-row overflow-x-scroll space-x-5 p-3">
+            {category.map((i) =>
+            <a className="relative cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl w-1/2" href={`/category/shared/${i.id}`}>
+                <div className="relative flex items-end overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80" alt="wallpaper"/>
+                </div>
+        
+                <div className="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-80">
+                    <h3 className="text-xl text-white font-bold">
+                        {i.name}</h3>
+                    <p className="mt-2 text-sm text-gray-300">{i.description}</p>
+                </div>
+            </a>
+            )}
         </div>
     )
 }

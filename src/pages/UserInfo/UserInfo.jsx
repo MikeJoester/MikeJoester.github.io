@@ -4,6 +4,7 @@ import {
   Navbar,
   UserData,
   EditButton,
+  SharedCategory,
 } from "../../components/";
 
 import "./UserInfo.css";
@@ -61,6 +62,11 @@ const UserInfo = () => {
         <div className="flex flex-col space-y-5">
           <h1 className="text-4xl font-semibold">CATEGORY LIST</h1>
           <UserData/>
+        </div>
+
+        <div className="flex flex-col space-y-5">
+          <h1 className="text-4xl font-semibold">SHARED CATEGORIES</h1>
+          <SharedCategory/>
         </div>
       </div>
     </div>

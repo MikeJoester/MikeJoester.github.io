@@ -31,7 +31,7 @@ const LeftContent = ({props}) => {
         setShowModal(true);
     }
   }
-  console.log(result);
+//   console.log(result);
   
   return (
     <div className="basis-2/3 flex flex-col w-1/2 space-y-10 justify-items-between">

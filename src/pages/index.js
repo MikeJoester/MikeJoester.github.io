@@ -5,6 +5,8 @@ import Post from "./Post/Post";
 import UserInfo from "./UserInfo/UserInfo";
 import RecoverPass from "./RecoverPass/RecoverPass";
 import Category from "./Category/Category";
+import SharedCategoryPage from "./Category/SharedCategoryPage";
+import SharedPost from "./Post/SharedPost";
 
 export {
     Login,
@@ -14,4 +16,6 @@ export {
     UserInfo,
     RecoverPass,
     Category,
+    SharedCategoryPage,
+    SharedPost,
 }

@@ -23,14 +23,14 @@ const PostList = (props) => {
           setPosts(res.data);
         }
         fetchPosts();
-        
     }, []);
 
     return (
         <div className="grid grid-cols-3 gap-5">
             {posts.slice(0, props.limit).map((post) => 
-            // <a href={"/post/" + props.id + "/" + post.id}>
+            // <a >
                 <div className="flex flex-col">
+                    {/* <p>Shared: {String(props.shared)}</p> */}
                     <div className="relative">
                         <img title="img1" src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" className="object-fill rounded-t-2xl"/>
                         { props.enableEdit ? 
@@ -67,8 +67,9 @@ const PostList = (props) => {
                         <img title="avatar" src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80" className="w-14 h-14 rounded-full object-fill m-3"/>
                         <hr className="w-px h-auto bg-slate-300 my-1"/>
                         <div className="flex flex-col pl-5 pt-1 text-white text-left">
-                            <a className="font-semibold hover:text-slate-300" href={"/post/" + props.id + "/" + post.id}>{post.name}</a>
-                            <a className="text-base text-yellow-400 hover:underline" href="/user">{user.data.data.name}</a>
+                            <a className="font-semibold hover:text-slate-300" href={props.shared ? ("/shared/" + props.id + "/" + post.id) : ("/post/" + props.id + "/" + post.id)}>{post.name}</a>
+                            {!props.shared ? <a className="text-base text-yellow-400 hover:underline" href="/user">{user.data.data.name}</a> : null}
+                            {props.shared ? <p className="text-sm text-justify pr-5 overflow-hidden">{post.description}</p> : null}
                         </div>
                     </div>
                 </div>

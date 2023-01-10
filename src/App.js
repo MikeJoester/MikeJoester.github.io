@@ -10,6 +10,8 @@ import {
   UserInfo,
   RecoverPass,
   Category,
+  SharedCategoryPage,
+  SharedPost,
 } from './pages';
 
 import {
@@ -26,7 +28,9 @@ function App() {
         <Route path="/register" element={user ? <Home/> : <Register/>}/>
         <Route path="/home" element={user ? <Home/> : <Login/>}/>
         <Route path="/category/:cateID" element={user ? <Category/> : <Login/>}/>
+        <Route path="/category/shared/:cateID" element={user ? <SharedCategoryPage/> : <Login/>}/>
         <Route path="/post/:cateID/:postID" element={user ? <Post/> : <Login/>}/>
+        <Route path="/shared/:cateID/:postID" element={user ? <SharedPost/> : <Login/>}/>
         <Route path="/user" element={user ? <UserInfo/> : <Login/>}/>
         <Route path="/recover" element={<RecoverPass/>}/>
       </Routes>
