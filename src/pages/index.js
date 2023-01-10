@@ -4,6 +4,7 @@ import Register from "./Register/Register";
 import Post from "./Post/Post";
 import UserInfo from "./UserInfo/UserInfo";
 import RecoverPass from "./RecoverPass/RecoverPass";
+import Category from "./Category/Category";
 
 export {
     Login,
@@ -12,4 +13,5 @@ export {
     Post,
     UserInfo,
     RecoverPass,
+    Category,
 }

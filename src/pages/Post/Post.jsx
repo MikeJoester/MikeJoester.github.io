@@ -127,10 +127,7 @@ const Post = () => {
                         </div>
                     : <div className="basis-2/3 flex flex-col text-left space-y-3">Error 404: Post not exists</div>}
 
-                    <RightContent 
-                        title="LATEST POSTS"
-                        number="5"
-                    />
+                    <RightContent/>
                 </div>
             </div>
         </div>

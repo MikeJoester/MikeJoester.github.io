@@ -49,7 +49,7 @@ const LeftContent = ({props}) => {
 
             <div className="flex flex-row overflow-x-scroll space-x-5 p-3">
                 {arr.map((i) => 
-                <div className="relative cursor-pointer w-full rounded-xl bg-white shadow-lg hover:shadow-xl min-w-1/2">
+                <a className="relative w-full rounded-xl bg-white shadow-lg hover:shadow-xl min-w-1/2" href={`/category/${i.id}`}>
                     <div className="relative flex items-end overflow-hidden rounded-xl">
                         <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80" alt="wallpaper"/>
                     </div>
@@ -59,7 +59,7 @@ const LeftContent = ({props}) => {
                             {i.name}</h3>
                         <p className="mt-2 text-sm text-gray-300">{i.description}</p>
                     </div>
-                </div>
+                </a>
                 )}
             </div>
         </div>

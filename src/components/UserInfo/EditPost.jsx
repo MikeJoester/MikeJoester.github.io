@@ -29,6 +29,7 @@ const EditPost = (props) => {
       alert("Edit Success!");
       window.location.reload();
     } catch (error) {
+      console.log(props.info);
       alert("Edit failed!");
     }
   }

@@ -42,9 +42,7 @@ const Home = () => {
         <div class="flex flex-col px-10 pb-10 pt-32 space-y-10">
           <div class="flex flex-row w-full space-x-8">
             <LeftContent props={category}/>
-            <RightContent
-              title="LATEST POSTS"
-            />
+            <RightContent/>
           </div>
         
         {category.map((i) =>
@@ -57,7 +55,7 @@ const Home = () => {
                 <img title="arrow" src={images.arrow} className="w-8 h-8 group-open:rotate-180 transition-transform origin-center"/>
               </div>
             </summary>
-            <PostList id={i.id}/>
+            <PostList id={i.id} limit={3} enableEdit={false}/>
           </details>
           <br/>
           <hr/> 

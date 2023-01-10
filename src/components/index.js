@@ -6,6 +6,7 @@ import EditButton from "./UserInfo/EditButton";
 import PostList from "./Home/PostList/PostList";
 import EditPost from "./UserInfo/EditPost";
 import EditCategory from "./UserInfo/EditCategory";
+import SharedCategory from "./UserInfo/SharedCategory";
 
 export {
     Navbar,
@@ -16,4 +17,5 @@ export {
     PostList,
     EditPost,
     EditCategory,
+    SharedCategory,
 }

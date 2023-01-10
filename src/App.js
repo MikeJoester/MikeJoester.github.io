@@ -9,6 +9,7 @@ import {
   Post,
   UserInfo,
   RecoverPass,
+  Category,
 } from './pages';
 
 import {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/" element={user ? <Home/> : <Login/>}/>
         <Route path="/register" element={user ? <Home/> : <Register/>}/>
         <Route path="/home" element={user ? <Home/> : <Login/>}/>
+        <Route path="/category/:cateID" element={user ? <Category/> : <Login/>}/>
         <Route path="/post/:cateID/:postID" element={user ? <Post/> : <Login/>}/>
         <Route path="/user" element={user ? <UserInfo/> : <Login/>}/>
         <Route path="/recover" element={<RecoverPass/>}/>

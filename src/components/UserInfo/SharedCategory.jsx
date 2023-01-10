@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import {
     EditCategory,
-  } from "../../components/";
+  } from "..";
 import { Context } from "../../context/Context";
 
-const UserData = (props) => {
+const SharedCategory = (props) => {
     const [category, setCate] = useState([]);
     const { user } = useContext(Context);
     const headerData = {
@@ -74,4 +74,4 @@ const UserData = (props) => {
     )
 }
 
-export default UserData
+export default SharedCategory
