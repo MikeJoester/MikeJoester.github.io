@@ -2,6 +2,7 @@
   "name": "tasklist-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://mikejoester.github.io/",
   "proxy" : "http://dev.thanqminh.com:3000/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
