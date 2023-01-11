@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/MikeJoester.github.io/static/css/main.07d4ad24.css",
-    "main.js": "/MikeJoester.github.io/static/js/main.c830c952.js",
-    "static/media/edit.svg": "/MikeJoester.github.io/static/media/edit.dcb4c89e18a01a7abff93a5446134a49.svg",
-    "index.html": "/MikeJoester.github.io/index.html",
-    "main.07d4ad24.css.map": "/MikeJoester.github.io/static/css/main.07d4ad24.css.map",
-    "main.c830c952.js.map": "/MikeJoester.github.io/static/js/main.c830c952.js.map"
+    "main.css": "/static/css/main.07d4ad24.css",
+    "main.js": "/static/js/main.514a96b5.js",
+    "static/media/edit.svg": "/static/media/edit.dcb4c89e18a01a7abff93a5446134a49.svg",
+    "index.html": "/index.html",
+    "main.07d4ad24.css.map": "/static/css/main.07d4ad24.css.map",
+    "main.514a96b5.js.map": "/static/js/main.514a96b5.js.map"
   },
   "entrypoints": [
     "static/css/main.07d4ad24.css",
-    "static/js/main.c830c952.js"
+    "static/js/main.514a96b5.js"
   ]
 }
