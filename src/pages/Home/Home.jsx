@@ -29,7 +29,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchCategory = async() => {
-      const res = await axios.get("http://dev.thanqminh.com:3000/task_lists", headerData);
+      const res = await axios.get("https://dev.thanqminh.com:3001/task_lists", headerData);
       setCate(res.data);
     }
     fetchCategory();

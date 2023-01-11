@@ -33,8 +33,8 @@ const Post = () => {
     useEffect(() => {
         const fetchPost = async() => {
             try {
-                const res = await axios.get(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos/${pid}`, headerData);
-                const category = await axios.get("http://dev.thanqminh.com:3000/task_lists", headerData);
+                const res = await axios.get(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, headerData);
+                const category = await axios.get("https://dev.thanqminh.com:3001/task_lists", headerData);
                 setPost(res.data);
                 setDate(res.data.created_at);
                 if (res.data.done === null) {
@@ -54,14 +54,14 @@ const Post = () => {
         e.preventDefault();
         post.done = !like;
         setLike(!like);
-        const resp = await axios.patch(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos/${pid}`, post, headerData);
+        const resp = await axios.patch(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, post, headerData);
         // console.log(resp.data.done);
     }
 
     const onClickDelete = async(e) => {
         e.preventDefault();
         if (window.confirm("Confirm delete?")) {
-            const res = await axios.delete(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos/${pid}`, headerData);
+            const res = await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, headerData);
             alert("Delete complete");
             window.location.replace("/home");
         }

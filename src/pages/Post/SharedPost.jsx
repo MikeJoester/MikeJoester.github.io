@@ -31,8 +31,8 @@ const SharedPost = () => {
     useEffect(() => {
         const fetchPost = async() => {
             try {
-                const res = await axios.get(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos`, headerData);
-                const sharedata = await axios.get(`http://dev.thanqminh.com:3000/shared/`, headerData);
+                const res = await axios.get(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos`, headerData);
+                const sharedata = await axios.get(`https://dev.thanqminh.com:3001/shared/`, headerData);
                 setPerm(sharedata.data.find(e=> String(e.id) === cid).is_write);
                 setPost(res.data.find(e => String(e.id) === pid));
                 if (res.data.find(e => String(e.id) === pid).done === null) {
@@ -51,14 +51,14 @@ const SharedPost = () => {
         e.preventDefault();
         post.done = !like;
         setLike(!like);
-        const resp = await axios.patch(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos/${pid}`, post, headerData);
+        const resp = await axios.patch(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, post, headerData);
         // console.log(resp.data.done);
     }
 
     const onClickDelete = async(e) => {
         e.preventDefault();
         if (window.confirm("Confirm delete?")) {
-            const res = await axios.delete(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos/${pid}`, headerData);
+            const res = await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, headerData);
             alert("Delete complete");
             window.location.replace("/home");
         }

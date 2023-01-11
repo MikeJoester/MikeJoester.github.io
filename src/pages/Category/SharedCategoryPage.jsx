@@ -30,7 +30,7 @@ const SharedCategoryPage = () => {
 
     useEffect(() => {
         const fetchCate = async() => {
-          const res = await axios.get(`http://dev.thanqminh.com:3000/shared`, headerData);
+          const res = await axios.get(`https://dev.thanqminh.com:3001/shared`, headerData);
           setCate(res.data.find(e => String(e.id) === cid));
         }
         fetchCate();
@@ -41,7 +41,7 @@ const SharedCategoryPage = () => {
         e.preventDefault();
         try {
             if (window.confirm("Confirm delete Category?")){
-                await axios.delete(`http://dev.thanqminh.com:3000/task_lists/${cid}`, headerData);
+                await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}`, headerData);
                 alert("Delete Success!");
                 window.location.href("/home");
             }
@@ -58,7 +58,7 @@ const SharedCategoryPage = () => {
         }
         //console.log(headerData);
         try {
-            const res = await axios.post(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos`, newPost, headerData);
+            const res = await axios.post(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos`, newPost, headerData);
             alert("Created Post!");
             window.location.reload();
         } catch (error) {

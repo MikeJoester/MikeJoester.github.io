@@ -11,7 +11,7 @@ const Login = () => {
   const handleClick = async(e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://dev.thanqminh.com:3000/auth/sign_in", {
+      const res = await axios.post("https://dev.thanqminh.com:3001/auth/sign_in", {
         email, 
         password
       });

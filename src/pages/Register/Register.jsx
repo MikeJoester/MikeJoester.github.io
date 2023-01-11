@@ -17,7 +17,7 @@ const Register = () => {
     }
     else {
       try {
-        const res = await axios.post("http://dev.thanqminh.com:3000/auth", {
+        const res = await axios.post("https://dev.thanqminh.com:3001/auth", {
           fullName,
           email,
           password,

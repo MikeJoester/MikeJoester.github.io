@@ -26,7 +26,7 @@ const EditButton = () =>{
       }
 
       try {
-        const result = await axios.patch("http://dev.thanqminh.com:3000/auth/password", newPassword, headerData);
+        const result = await axios.patch("https://dev.thanqminh.com:3001/auth/password", newPassword, headerData);
   
         alert("Change Password Success! Please re-login!");
         dispatch({ 
@@ -51,7 +51,7 @@ const EditButton = () =>{
       }
 
       try {
-        const res = await axios.patch("http://dev.thanqminh.com:3000/auth", newInfo, headerData);
+        const res = await axios.patch("https://dev.thanqminh.com:3001/auth", newInfo, headerData);
   
         alert("Change Username Success!");
         dispatch({ 

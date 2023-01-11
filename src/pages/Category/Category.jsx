@@ -35,9 +35,9 @@ const Category = () => {
 
     useEffect(() => {
         const fetchPosts = async() => {
-            const res = await axios.get(`http://dev.thanqminh.com:3000/task_lists/${cid}`, headerData);
-            const users = await axios.get(`http://dev.thanqminh.com:3000/task_lists/${cid}/share`, headerData);
-            const getUser = await axios.get("http://dev.thanqminh.com:3000/users", headerData);
+            const res = await axios.get(`https://dev.thanqminh.com:3001/task_lists/${cid}`, headerData);
+            const users = await axios.get(`https://dev.thanqminh.com:3001/task_lists/${cid}/share`, headerData);
+            const getUser = await axios.get("https://dev.thanqminh.com:3001/users", headerData);
             setPosts(res.data);
             setColabs(users.data.map(i => { 
                 return {
@@ -58,7 +58,7 @@ const Category = () => {
         e.preventDefault();
         try {
             if (window.confirm("Confirm delete Category?")){
-                await axios.delete(`http://dev.thanqminh.com:3000/task_lists/${cid}`, headerData);
+                await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}`, headerData);
                 alert("Delete Success!");
                 window.location.href("/home");
             }
@@ -75,7 +75,7 @@ const Category = () => {
         }
         //console.log(headerData);
         try {
-            await axios.post(`http://dev.thanqminh.com:3000/task_lists/${cid}/todos`, newPost, headerData);
+            await axios.post(`https://dev.thanqminh.com:3001task_lists/${cid}/todos`, newPost, headerData);
             alert("Created Post!");
             window.location.reload();
         } catch (error) {
@@ -84,7 +84,7 @@ const Category = () => {
     }
 
     const onClickShare = async(e) => {
-        const res = await axios.get("http://dev.thanqminh.com:3000/users", headerData);
+        const res = await axios.get("https://dev.thanqminh.com:3001/users", headerData);
         if (res.data.find(e => e.email === mail)) {
             const shareData = {
                 "user_id" : res.data.find(e => e.email === mail).id,
@@ -92,7 +92,7 @@ const Category = () => {
                 "is_write" : perm
             }
             try {
-                await axios.post(`http://dev.thanqminh.com:3000/task_lists/${cid}/share`, shareData, headerData);
+                await axios.post(`https://dev.thanqminh.com:3001/task_lists/${cid}/share`, shareData, headerData);
                 alert("Share success!");
             } catch (error) {
                 alert("Cannot share. Please try again!");
@@ -251,7 +251,7 @@ const Category = () => {
                                                     }
                                                     e.preventDefault();
                                                     try {
-                                                        await axios.put(`http://dev.thanqminh.com:3000/task_lists/${el.id}/share/${el.uid}`, permission, headerData);
+                                                        await axios.put(`https://dev.thanqminh.com:3001/task_lists/${el.id}/share/${el.uid}`, permission, headerData);
                                                         alert("Save Success!");
                                                         setCmodal(false);
                                                     } catch (error) {
