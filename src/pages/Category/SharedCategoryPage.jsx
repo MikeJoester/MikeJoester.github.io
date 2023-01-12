@@ -58,7 +58,7 @@ const SharedCategoryPage = () => {
         }
         //console.log(headerData);
         try {
-            const res = await axios.post(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos`, newPost, headerData);
+            await axios.post(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos`, newPost, headerData);
             alert("Created Post!");
             window.location.reload();
         } catch (error) {

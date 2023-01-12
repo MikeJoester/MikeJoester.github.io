@@ -61,7 +61,7 @@ const Category = () => {
             if (window.confirm("Confirm delete Category?")){
                 await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}`, headerData);
                 alert("Delete Success!");
-                window.location.href("/home");
+                window.location.href("/");
             }
         } catch (error) {
             alert("Cannot delete Category!");
@@ -76,7 +76,7 @@ const Category = () => {
         }
         //console.log(headerData);
         try {
-            await axios.post(`https://dev.thanqminh.com:3001task_lists/${cid}/todos`, newPost, headerData);
+            await axios.post(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos`, newPost, headerData);
             alert("Created Post!");
             window.location.reload();
         } catch (error) {

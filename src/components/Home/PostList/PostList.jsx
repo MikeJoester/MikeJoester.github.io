@@ -41,7 +41,7 @@ const PostList = (props) => {
                             <button onClick={async(e)=>{
                                 e.preventDefault();
                                 try {
-                                    await axios.post(`http://dev.thanqminh.com:3000/task_lists/${props.id}/todos/`, post, headerData);
+                                    await axios.post(`https://dev.thanqminh.com:3001/task_lists/${props.id}/todos/`, post, headerData);
                                     alert("Duplicated!");
                                     window.location.reload();
                                 } catch (error) {
@@ -52,7 +52,7 @@ const PostList = (props) => {
                                 e.preventDefault();
                                 try {
                                     if (window.confirm("Confirm delete post?")){
-                                        await axios.delete(`http://dev.thanqminh.com:3000/task_lists/${props.id}/todos/${post.id}`, headerData);
+                                        await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${props.id}/todos/${post.id}`, headerData);
                                         alert("Post Deleted!");
                                         window.location.reload();
                                     }                                    

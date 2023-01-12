@@ -19,14 +19,14 @@ const LeftContent = ({props}) => {
 
   const onClickSearch = async(e) => {
     e.preventDefault();
-    const res = await axios.get(`http://dev.thanqminh.com:3000/search/${searchVal}`, headerData);
+    const res = await axios.get(`https://dev.thanqminh.com:3001/search/${searchVal}`, headerData);
     setResult(res.data);
     setShowModal(true);
   }
   
   const onKeySearch = async(e) => {
     if (e.key === "Enter") {
-        const res = await axios.get(`http://dev.thanqminh.com:3000/search/${searchVal}`, headerData);
+        const res = await axios.get(`https://dev.thanqminh.com:3001/search/${searchVal}`, headerData);
         setResult(res.data);
         setShowModal(true);
     }
