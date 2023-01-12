@@ -23,7 +23,7 @@ const EditCategory = (props) => {
     props.info.name = postName;
     props.info.description = postDesc;
     try {
-      const res = await axios.patch(`https://dev.thanqminh.com:3001/task_lists/${props.info.id}`, props.info, headerData);
+      await axios.patch(`https://dev.thanqminh.com:3001/task_lists/${props.info.id}`, props.info, headerData);
       
       alert("Edit Category Success!");
       window.location.reload();

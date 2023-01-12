@@ -95,6 +95,7 @@ const Category = () => {
             try {
                 await axios.post(`https://dev.thanqminh.com:3001/task_lists/${cid}/share`, shareData, headerData);
                 alert("Share success!");
+                window.location.reload();
             } catch (error) {
                 alert("Cannot share. Please try again!");
             }
@@ -255,12 +256,27 @@ const Category = () => {
                                                         await axios.put(`https://dev.thanqminh.com:3001/task_lists/${el.id}/share/${el.uid}`, permission, headerData);
                                                         alert("Save Success!");
                                                         setCmodal(false);
+                                                        window.location.reload();
                                                     } catch (error) {
-                                                        alert("Cannot save");
+                                                        alert("Cannot save!");
                                                     }
                                                     
                                                 }
                                                 }>Save</button>
+                                                <button className="flex-1 bg-red-500 px-5 py-2 text-xl rounded-lg hover:bg-red-700 self-right" onClick={
+                                                async(e)=> {
+                                                    e.preventDefault();
+                                                    try {
+                                                        await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${el.id}/share/${el.uid}`, headerData);
+                                                        alert("Delete Collaborator Success!");
+                                                        setCmodal(false);
+                                                        window.location.reload();
+                                                    } catch (error) {
+                                                        alert("Cannot delete! Something's wrong!");
+                                                    }
+                                                    
+                                                }
+                                                }>Delete</button>
                                             </div>
                                             
                                             )}

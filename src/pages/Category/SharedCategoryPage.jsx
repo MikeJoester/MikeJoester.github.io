@@ -81,7 +81,6 @@ const SharedCategoryPage = () => {
                             <div className="flex flex-col">
                                 {/* <h1>Owner: {owner.email}</h1> */}
                                 <div className="flex flex-row space-x-4">
-                                    <EditCategory info={cate}/>
                                     <button className="font-medium text-white dark:text-white hover:underline" onClick={()=>setModal(true)}>Add</button>
                                     <button className="font-medium text-red-600 dark:text-red-500 hover:underline" onClick={onClickDelete}>Delete</button>
                                 </div>
