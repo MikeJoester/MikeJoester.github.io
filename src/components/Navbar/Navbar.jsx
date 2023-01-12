@@ -26,7 +26,7 @@ const Navbar = () => {
             <div class={"w-full md:block md:w-auto " + hidden} id="navbar-default">
                 <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 md:items-center">
                     <li>
-                        <a href="/home" class="block py-2 pr-4 pl-3 bg-blue-700 rounded md:bg-transparent md:p-0 hover:text-gray-400" aria-current="page">Home</a>
+                        <a href="/" class="block py-2 pr-4 pl-3 bg-blue-700 rounded md:bg-transparent md:p-0 hover:text-gray-400" aria-current="page">Home</a>
                     </li>
 
                     <li>

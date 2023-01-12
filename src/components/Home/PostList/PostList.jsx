@@ -19,7 +19,7 @@ const PostList = (props) => {
 
     useEffect(() => {
         const fetchPosts = async() => {
-          const res = await axios.get(`http://dev.thanqminh.com:3000/task_lists/${props.id}/todos`, headerData);
+          const res = await axios.get(`https://dev.thanqminh.com:3001/task_lists/${props.id}/todos`, headerData);
           setPosts(res.data);
         }
         fetchPosts();
