@@ -23,6 +23,7 @@ const Category = () => {
     const [desc, setDesc] = useState('');
     const [colabs, setColabs] = useState();
     const cid = location.pathname.split("/")[2];
+    console.log(cid);
     const [posts, setPosts] = useState([]);
     const headerData = {
         headers: {

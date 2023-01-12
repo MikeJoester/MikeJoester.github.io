@@ -32,7 +32,7 @@ const RecoverPass = () => {
               </div>
             </div>
   
-            <p class="text-base self-center"><a title="." href="register.html" target="" class="text-cyan-400 hover:underline"></a></p>
+            <p class="text-base self-center"><a title="." href="/#/register" target="" class="text-cyan-400 hover:underline"></a></p>
           </div>
         </div>
     </div>

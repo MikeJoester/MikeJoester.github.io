@@ -17,7 +17,7 @@ const Login = () => {
       });
       
       dispatch({ 
-        type: "LOGIN_SUCCESS", 
+        type: "LOGIN_SUCCESS",
         payload: res
       });
 
@@ -52,12 +52,12 @@ const Login = () => {
   
                 <button title="login" className="bg-slate-400 rounded-md py-2 font-bold text-lg ease-in-out duration-300 hover:bg-slate-500" onClick={handleClick} disabled={isFetching}>Log in</button>
                 <div className="flex flex-col text-base w-full space-y-3">
-                  <a href="/recover" className="font-semibold text-red-400 hover:underline">Forgot Password?</a>
+                  <a href="/#/recover" className="font-semibold text-red-400 hover:underline">Forgot Password?</a>
                 </div>
               </div>
             </form>
   
-            <p className="text-base self-center">New to this blog? <a href="/register" target="" className="text-cyan-400 hover:underline">Register Here</a></p>
+            <p className="text-base self-center">New to this blog? <a href="/#/register" target="" className="text-cyan-400 hover:underline">Register Here</a></p>
           </div>
         </div>
     </div>

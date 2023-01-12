@@ -29,7 +29,7 @@ const SharedCategory = () => {
     return (
         <div className="flex flex-row overflow-x-scroll space-x-5 p-3">
             {category.map((i) =>
-            <a className="relative cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl w-1/2" href={`/category/shared/${i.id}`}>
+            <a className="relative cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl w-1/2" href={`/#/category/shared/${i.id}`}>
                 <div className="relative flex items-end overflow-hidden rounded-xl">
                     <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80" alt="wallpaper"/>
                 </div>

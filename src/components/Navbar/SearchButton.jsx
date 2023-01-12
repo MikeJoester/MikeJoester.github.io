@@ -82,7 +82,7 @@ const SearchButton = () =>{
                   
                   {result.length > 0 ?
                     result.map((i) =>
-                    <a className="relative cursor-pointer w-full rounded-xl bg-white shadow-lg hover:shadow-xl min-w-1/2" href={"/post/" + i.task_list_id + "/" + i.id} target="_blank">
+                    <a className="relative cursor-pointer w-full rounded-xl bg-white shadow-lg hover:shadow-xl min-w-1/2" href={"/#/post/" + i.task_list_id + "/" + i.id} target="_blank">
                         <div className="relative flex items-end overflow-hidden rounded-xl">
                             <img src="httpss://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="wallpaper"/>
                         </div>
