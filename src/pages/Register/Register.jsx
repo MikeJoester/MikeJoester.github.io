@@ -18,9 +18,9 @@ const Register = () => {
     else {
       try {
         const res = await axios.post("https://dev.thanqminh.com:3001/auth", {
-          fullName,
-          email,
-          password,
+          "name" : fullName,
+          "email" : email,
+          "password" : password,
         });
         if (res.data) {
           alert("Register Success!");
