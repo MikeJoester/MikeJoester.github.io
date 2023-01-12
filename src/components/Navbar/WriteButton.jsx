@@ -24,7 +24,9 @@ const WriteButton = () => {
     }
     //console.log(headerData);
     try {
-        const res = await axios.post("https://dev.thanqminh.com:3001/task_lists", newCate, headerData);
+        await axios.post("https://dev.thanqminh.com:3001/task_lists", newCate, headerData);
+        alert("New Category created!");
+        window.location.reload();
     } catch (error) {
         alert("Cannot create category! Something is wrong I can feel it");
     }

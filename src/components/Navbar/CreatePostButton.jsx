@@ -38,7 +38,7 @@ const CreatePostButton = () => {
     try {
         const res = await axios.post(`https://dev.thanqminh.com:3001/task_lists/${idNum}/todos`, newPost, headerData);
         alert("Created Post!");
-        window.location.replace("/post/" + idNum + "/" + res.data.id);
+        window.location.replace("/#/post/" + idNum + "/" + res.data.id);
     } catch (error) {
         console.log(idNum);
         alert("Cannot create post! Something is wrong I can feel it");
