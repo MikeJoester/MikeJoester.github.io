@@ -17,9 +17,9 @@ const RightContent = () => {
 
   useEffect(() => {
     const fetchLatestPost = async() => {
-      const res = await axios.get("http://dev.thanqminh.com:3000/task_lists", headerData);
+      const res = await axios.get("https://dev.thanqminh.com:3001/task_lists", headerData);
       setCateID(res.data[res.data.length - 1].id);
-      const response = await axios.get(`http://dev.thanqminh.com:3000/task_lists/${res.data[res.data.length - 1].id}/todos`, headerData);
+      const response = await axios.get(`https://dev.thanqminh.com:3001/task_lists/${res.data[res.data.length - 1].id}/todos`, headerData);
       setLatest(response.data);
     }
     fetchLatestPost();
