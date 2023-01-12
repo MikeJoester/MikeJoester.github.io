@@ -61,9 +61,9 @@ const Post = () => {
     const onClickDelete = async(e) => {
         e.preventDefault();
         if (window.confirm("Confirm delete?")) {
-            const res = await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, headerData);
+            await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}/todos/${pid}`, headerData);
             alert("Delete complete");
-            window.location.replace("/home");
+            window.location.replace("/");
         }
     }
 

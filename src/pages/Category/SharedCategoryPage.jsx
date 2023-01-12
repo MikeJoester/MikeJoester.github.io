@@ -43,7 +43,7 @@ const SharedCategoryPage = () => {
             if (window.confirm("Confirm delete Category?")){
                 await axios.delete(`https://dev.thanqminh.com:3001/task_lists/${cid}`, headerData);
                 alert("Delete Success!");
-                window.location.href("/home");
+                window.location.href("/");
             }
         } catch (error) {
             alert("Cannot delete Category!");
